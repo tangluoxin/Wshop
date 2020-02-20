@@ -1,0 +1,58 @@
+<!--pages/login_y/login_y.wxml-->
+
+<!-- 界面：手机号验证码登录-->
+<!-- 作者：唐珞鑫 -->
+
+<view class='container '>
+ <view bindtap="bindViewTap" class="userinfo">
+ 
+<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"
+ 
+background-size="cover"/>
+</view>
+
+<view class="login-from">
+
+ <!--图片-->
+<view class='imagesize'>
+  <image src="/images/logo.png" class='in-image'   >
+  </image>
+</view>
+
+  <view>
+  <view class='row'>
+     <input type="number" placeholder='请输入手机号' bindinput='bindPhoneInput'/> 
+  </view>
+
+
+<view class="content_a">
+  <view>
+     <input class='row_a' type="number" placeholder='输入验证码'  maxlength='4 'bindinput='bindCodeInput' /> 
+  </view>
+  <view>
+  <button class='.codeBtn' bindtap='getCode' hidden='{{hidden}}' disabled='{{btnDisabled}}'>{{btnValue}}</button>
+ </view>
+</view>
+
+
+  <view>
+     <button class='.loginBtn ' bindtap='save' >登录</button>
+  </view>
+
+<view class="content">
+<navigator url="../login/login">
+<label class=".login_yLab ">账号登录</label>
+</navigator>
+
+<navigator url="../cameralogin/cameralogin">
+<label class=".login_sLab">人脸登录</label>
+</navigator>
+
+<navigator url="../register/register">
+<label class=".register "> 新用户注册</label>
+</navigator>
+</view>
+
+</view> 
+</view>
+</view>

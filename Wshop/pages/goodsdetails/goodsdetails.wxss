@@ -1,0 +1,173 @@
+/* pages/goodsdetails/goodsdetails.wxss */
+
+/* 界面：商品详情 */
+/* 作者：吴彤 */
+/* 最后更新时间：2019.9.9 */
+
+page{
+  background-color: #fff;
+}
+
+.picture{
+  display: flex;
+  margin-top: 0rpx;
+  width: 100%;
+}
+
+.picture image{
+  width: 100%;
+}
+
+.name{
+  display: flex;
+  margin-top: 40rpx;
+  margin-left:30rpx;
+  font-size:50rpx;
+  font-weight: 550;
+}
+
+.price{
+  display: flex;
+  margin-top: 60rpx;
+  margin-left:30rpx;
+  font-size:60rpx;
+  color: red;
+  font-weight: 520;
+  position: absolute;
+  left:0;
+}
+
+.quantity{
+  display: flex;
+  margin-top: 65rpx;
+  font-size:30rpx;
+  color:#6b6b6b;
+  position: absolute;
+  left:230rpx;
+}
+
+.location{
+  font-size:30rpx;
+  margin-top: 40rpx;
+  margin-left:30rpx;
+  color:#6b6b6b;
+}
+
+
+ 
+/*主容器*/
+.stepper {
+    width: 80px;
+    height: 26px;
+    /*给主容器设一个边框*/
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top:60rpx;
+    position: absolute;
+    right:30rpx;
+}
+ 
+/*加号和减号*/
+.stepper text {
+    width: 19px;
+    line-height: 26px;
+    text-align: center;
+    float: left;
+}
+ 
+/*数值*/
+.stepper input {
+    width: 40px;
+    height: 26px;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    /*给中间的input设置左右边框即可*/
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    position: relative;
+    align-items: center;
+}
+ 
+/*普通样式*/
+.stepper .normal{
+    color: black;
+}
+ 
+/*禁用样式*/
+.stepper .disabled{
+    color: #ccc;
+}
+
+.pricestorage{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-bottom: 130rpx;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-around
+}
+
+
+.codeNum {
+  color:#010101;
+  text-align: center;
+  font-size: 40rpx;
+  margin-top: 160rpx;
+}
+
+.addto {
+  font-size:39rpx;
+  background:#010101;
+  position: fixed;
+  bottom: 0;
+  right:0;
+  display: flex;
+  width: 80%;
+
+  color: #fff;
+  border-radius:0rpx;
+  text-align: center;
+  margin-left:150rpx;
+  margin-right: 0rpx;
+  z-index:999;
+}
+
+.add{
+  margin-left: 176rpx;
+}
+
+.GoToShoppingCart{
+ 
+  display:flex; 
+  justify-content: center;
+  margin-left: 47rpx;
+  position: fixed;
+  bottom: 33rpx;
+ 
+}
+
+.GoToShoppingCart image{
+  width:50rpx;
+  height:50rpx;
+}
+
+.local{
+  display:flex;
+  position: fixed;
+  bottom: 0rpx;
+  width:100%;
+  background-color: #fff;
+  border-top:1px solid rgba(150, 145, 145, 0.616);
+  height: 94rpx;
+}
+
+.goto{
+  font-size:20rpx;
+  position: fixed;
+  bottom: 5rpx;
+  margin-left: 25rpx;
+}

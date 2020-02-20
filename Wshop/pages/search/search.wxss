@@ -1,0 +1,382 @@
+/* pages/search/search.wxss */
+
+/* 界面：搜索界面 */
+/* 作者：唐珞鑫 */
+
+page{
+
+  background-color: #f2f2f2;
+
+}
+
+.search-wrap{
+
+  width:100%;
+
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+
+  background-color: #fff;
+
+  padding-bottom: 20rpx;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  height: 120rpx;
+ 
+}
+
+.search-wrap .search{
+
+  border:1rpx solid rgba(204, 204, 204, 0.4);
+
+  width:500rpx;
+
+  height:60rpx;
+
+  background-color: #f2f2f2;
+
+  margin-left:30rpx;
+
+  padding-left:40px;
+
+  margin-top: 20rpx;
+
+  font-size: 12px;
+
+  color:#000;
+
+  border-radius: 50rpx;
+
+}
+
+.search-wrap .searchImg{
+
+  width:35rpx;
+
+  height:35rpx;
+
+  position: absolute;
+
+  left:50rpx;
+
+  top:20rpx;
+
+  margin-top: 25rpx;
+
+}
+
+.search-wrap .closeImg{
+
+  width:30rpx;
+
+  height:30rpx;
+
+  position: absolute;
+
+  right:166rpx;
+
+  top:20rpx;
+
+  z-index: 999;
+
+  margin-top: 25rpx;
+
+}
+
+.search-wrap .cancel{
+
+  font-size: 16px;
+
+  color:#666;
+
+  margin-left:30rpx;
+
+  margin-top: 20rpx;
+
+}
+
+/* 搜索列表 */
+.zanwu{
+
+  margin-left: 315rpx;
+
+  margin-top: 20rpx;
+
+  color: rgb(155, 153, 153)
+
+}
+
+.search-content{
+
+  width:100%;
+
+}
+
+.content{
+
+  width:100%;
+
+  padding:0rpx 20rpx;
+
+  box-sizing: border-box;
+
+  background-color: #fff;
+
+  color:#000;
+
+}
+
+.title{
+
+  width:100%;
+
+  height:60rpx;
+
+  margin:0 auto;
+
+  font-size: 26rpx;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  line-height: 60rpx;
+
+  border-bottom: 1rpx solid #eee;
+
+}
+
+.carList{
+
+  width:100%;
+
+  height:60rpx;
+
+  line-height: 60rpx;
+
+  font-size: 24rpx;
+
+  border-bottom: 1rpx solid #eee;
+
+}
+
+.carList text{
+
+  margin-right: 30rpx;
+
+}
+
+/* 历史记录 */
+.historywrap{
+
+  width:100%;
+
+  margin-top: 20rpx;
+
+}
+
+.historyTitle{
+
+  width:100%;
+
+  padding:0rpx 30rpx;
+
+  margin-bottom: 20rpx;
+
+  box-sizing: border-box;
+
+  color:#ccc;
+
+  font-size: 24rpx;
+
+  display: flex;
+
+  justify-content: space-between;
+
+}
+
+.historyTitle image{
+
+  width:25rpx;
+
+  height:25rpx;
+
+}
+
+.historyList{
+
+  width:100%;
+
+  margin-top: 20rpx;
+
+  background-color: #fff;
+
+  padding:20rpx 40rpx;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+}
+
+.historyList view{
+
+  font-size: 24rpx;
+
+  color:#333;
+
+  padding:2rpx 8rpx;
+
+  border:1rpx solid #ccc;
+
+  border-radius: 6rpx;
+
+  margin:10rpx;
+
+}
+
+
+/* 双瀑布流 */
+.title{
+
+  margin-top: 45rpx;
+
+  margin-left: 0rpx;
+
+}
+
+.content{
+
+  display: flex;
+
+  flex-direction: row;
+
+  margin-left: 0rpx;
+
+  margin-right: 20rpx;
+
+  overflow: hidden;
+
+}
+
+.left{
+
+  width: 335rpx;
+
+  margin-left: 13rpx;
+
+}
+
+.right{
+
+  width: 335rpx;
+
+  margin-left: 20rpx;
+
+}
+
+.leftview{
+
+height:490rpx;
+
+border-radius: 10rpx;
+
+background-color: white;
+
+margin-top: 20rpx;
+
+}
+
+.rightview{
+
+height:490rpx;
+
+border-radius: 10rpx;
+
+background-color: white;
+
+margin-top: 20rpx;
+
+}
+
+.box{
+
+  display: flex;
+
+  flex-direction:column;
+ 
+  position: relative;
+  
+}
+
+.goodname{
+
+ margin-top: 10rpx;
+
+ margin-left: 10rpx;
+
+ font-size: 29rpx;
+
+ letter-spacing:3rpx;
+
+}
+
+.goodprice{
+
+  font-weight: bolder;
+
+ margin-left: 10rpx;
+
+ margin-top: 10rpx;
+
+ font-size: 27rpx;
+
+ color: rgb(214, 14, 14);
+
+}
+
+.goodsale{
+
+  font-size: 25rpx;
+
+  margin-top: 20rpx;
+
+  margin-left: 10rpx;
+
+  color:  #bebbbb;
+
+}
+
+.go{
+
+  width: 65rpx;
+
+  height: 65rpx;
+
+  position: absolute;
+
+  right: 10rpx; 
+
+  top:420rpx;
+
+}
+
+.pic{
+
+  border-top-left-radius: 10rpx;
+
+  border-top-right-radius: 10rpx;
+
+  width: 335rpx;
+
+  height:335rpx;
+  
+}

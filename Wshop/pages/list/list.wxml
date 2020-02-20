@@ -1,0 +1,38 @@
+<!--pages/list/list.wxml-->
+
+<!-- 界面：订单详情 -->
+<!-- 作者：唐珞鑫 -->
+
+<!-- 商品列表模块 -->
+<view  wx:for="{{oderlist.orders}}" wx:key="{{index}}" bindtap="goDet" data-gid="{{item.gid}}">
+ <button class="order"  >
+    <image class="oder-img" src="{{item.image}}"></image>
+    <view class="order-info">
+     
+      <view class="content">
+       <view class="order-name">{{item.name}}</view>
+       <view class="order-price">¥{{item.uprice}}</view>
+       
+      </view>
+      <view class="order-number">x{{item.number}}</view>
+    </view>
+ </button>
+</view> 
+
+<!-- 时间总金额信息模块 -->
+<view class="bottom">  
+ <view>下单时间：{{time}}</view>
+ <view class="content2">
+   <view class="bottom-sum1">商品金额</view>
+   <view class="bottom-sum2">¥{{totalprice}}</view>
+ </view>
+ 
+</view> 
+
+<!-- 防挡透明控件放在最下面 -->
+<view class='placeholder-view'></view>
+
+<!-- 底部固定按钮 -->
+<view class="content1">
+<button class="bnt" bindtap="deleteList">删除订单</button>
+</view>

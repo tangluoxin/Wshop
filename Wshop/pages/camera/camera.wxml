@@ -1,0 +1,20 @@
+<!--pages/camera/camera.wxml-->
+
+<!-- 界面：账号绑定人脸 -->
+<!-- 作者：吴彤 -->
+<!-- 最后更新时间：2019.9.9 -->
+
+<!-- 相机模块 -->
+<view class="camera">
+  <camera mode="normal" device-position="front" flash="auto" binderror="error" style="width: 100%; height: 850rpx;"></camera>
+</view>
+
+<!-- 拍照按钮弹起样式 -->
+<view class="register">
+<image class="inregister" src="/images/takephoto2.png" mode="aspectFill" bindtap="takePhoto" bindtouchstart="start" bindtouchend="end"></image>
+</view>
+
+<!-- 拍照按钮按下样式 -->
+<view class="register" hidden="{{!touchFlag}}">
+<image class="inregister" src="/images/takephoto.png" mode="aspectFill" bindtap="takePhoto"></image>
+</view>

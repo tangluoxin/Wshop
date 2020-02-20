@@ -1,0 +1,105 @@
+<!--pages/search/search.wxml-->
+<!-- 界面：搜索界面 -->
+<!-- 作者：唐珞鑫 -->
+
+<!-- 搜索栏 -->
+<view class="search-wrap">
+  <input class="search" catchinput="search" value='{{inputValue}}'></input>
+  <image src="/images/search.png" class="searchImg"></image>
+  <image src="/images/cancel.png" class="closeImg" catchtap='close' wx:if="{{closeImg}}"></image>
+  <view class="cancel" bindtap='cancel'>取消</view>
+</view>
+
+<!-- 搜索列表 -->
+<view class="search-content">
+<!-- 历史搜索 -->
+  <view class="historywrap" wx:if="{{history}}">
+    <view class="historyTitle">
+      <view>历史搜索</view>
+      
+    </view>
+    
+  </view>
+  <!-- 暂无数据组件 -->
+  <noData wx:if="{{noData}}">
+    <view class="zanwu">暂无数据</view>
+  </noData>
+
+  <view wx:if="{{has}}">
+  <!-- 搜索列表 -->
+  <view class='content'>
+
+   <view class='left'>
+    <view class='leftview' wx:for="{{sleftList}}" wx:key="index" catchtap="goDet" data-gid="{{item.gid}}">
+     <view class="box">
+       <image class='pic' src='{{item.image}}'></image>
+       <view class="goodname">{{item.name}}</view>
+       <view class="goodprice">¥{{item.uprice}}</view>
+  
+       <image class='go' catchtap="addcart" data-gid="{{item.gid}}" src='../../images/加入购物车.png'></image>
+     </view>
+    </view>
+   </view>
+
+   <view class='right'>
+     <view class='rightview' wx:for="{{srightList}}" wx:key="index" catchtap="goDet" data-gid="{{item.gid}}">
+        <view class="box">
+         <image class='pic' src='{{item.image}}'></image>
+         <view class="goodname">{{item.name}}</view>
+         <view class="goodprice">¥{{item.uprice}}</view>
+      
+         <image class='go' catchtap="addcart" data-gid="{{item.gid}}" src='../../images/加入购物车.png'></image>
+        </view>
+      </view>
+    </view>
+ </view>
+
+
+</view>
+<view wx:else>
+<view class='placeholder-view'></view>
+</view>
+
+  <!-- 用户推荐商品双瀑布流 -->
+
+<view wx:if="{{hasnoramalData}}">
+  <view class="title">猜你喜欢</view>
+  <view class='content'>
+
+   <view class='left'>
+    <view class='leftview' wx:for="{{leftList}}" wx:key="index" catchtap="goDet" data-gid="{{item.gid}}">
+     <view class="box">
+       <image class='pic' src='{{item.image}}'></image>
+       <view class="goodname">{{item.name}}</view>
+       <view class="goodprice">¥{{item.uprice}}</view>
+  
+       <image class='go' catchtap="addcart" data-gid="{{item.gid}}" src='../../images/加入购物车.png'></image>
+     </view>
+    </view>
+   </view>
+
+   <view class='right'>
+     <view class='rightview' wx:for="{{rightList}}" wx:key="index" catchtap="goDet" data-gid="{{item.gid}}">
+        <view class="box">
+         <image class='pic' src='{{item.image}}'></image>
+         <view class="goodname">{{item.name}}</view>
+         <view class="goodprice">¥{{item.uprice}}</view>
+      
+         <image class='go' catchtap="addcart" data-gid="{{item.gid}}" src='../../images/加入购物车.png'></image>
+        </view>
+      </view>
+    </view>
+ </view>
+</view>
+
+<view wx:else>
+<view class='placeholder-view'></view>
+</view>
+
+<!-- 防挡透明控件放在最下面 -->
+<view class='placeholder-view'></view>
+
+
+
+</view>
+

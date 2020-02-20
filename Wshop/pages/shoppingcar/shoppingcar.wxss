@@ -1,0 +1,481 @@
+/* pages/shoppingcar/shoppingcar.wxss */
+
+
+/* 界面：购物车 */
+/* 作者：唐珞鑫 */
+ 
+
+.touch-item {
+
+ background-color: #fff;
+
+ margin-top: 20rpx;
+
+ display: flex;
+
+ justify-content: space-between;
+
+ width: 100%;
+
+ overflow: hidden;
+
+ box-sizing: border-box;
+
+}
+ 
+.content {
+
+ width: 100%;
+
+ -webkit-transition: all 0.4s;
+
+ transition: all 0.4s;
+
+ -webkit-transform: translateX(180rpx);
+
+ transform: translateX(180rpx);
+
+ margin-left: -180rpx;
+
+}
+ 
+.touch-move-active .content, .touch-move-active .del {
+
+ -webkit-transform: translateX(0);
+
+ transform: translateX(0);
+
+}
+
+.del {
+
+ background-color: red;
+
+ width: 180rpx;
+
+ display: flex;
+
+ flex-direction: column;
+
+ align-items: center;
+
+ justify-content: center;
+
+ color: #fff;
+
+ -webkit-transform: translateX(180rpx);
+
+ transform: translateX(180rpx);
+
+ -webkit-transition: all 0.4s;
+
+ transition: all 0.4s;
+
+}
+
+.deletegood{
+
+  height: 50rpx;
+
+  top:0;
+
+  z-index: 200;
+  
+}
+
+.drug-order {
+
+  background-color: rgb(250, 250, 250);
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+.cart_container {
+
+  display: flex;
+
+  flex-direction: row;
+
+  background-color: #fff;
+
+  margin-top: 20rpx;
+
+  padding: 0rpx 20rpx;
+
+  box-sizing: border-box;
+
+}
+
+.scroll {
+  
+  margin-bottom:80rpx;
+
+}
+
+.column {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.row {
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+}
+
+/* 加减框位置控制 */
+.loca{
+
+  position: absolute;
+
+  left: 330rpx;
+
+}
+
+.sku {
+
+  position: relative;
+
+  right: -200rpx;
+
+  bottom: -10rpx;
+
+}
+
+.sku text {
+
+  display: inline-block;
+
+  height: 40rpx;
+
+  line-height: 34rpx;
+
+  width: 40rpx;
+
+  margin-left: 20rpx;
+
+  text-align: center;
+
+}
+
+.sku .sub {
+
+  color: #000;
+
+  border: 1px solid #888;
+
+  border-radius: 50%;
+
+  font-weight: bold;
+
+}
+
+.sku .number {
+
+  font-size: 26rpx;
+
+  font-family: ArialMT;
+
+  color: rgba(3, 3, 3, 1);
+
+}
+
+.sku .add {
+
+  color: #1296db;
+
+  border: 1px solid #1296db;
+
+  border-radius: 50%;
+
+  font-weight: bold;
+
+}
+
+.sku-price {
+
+  font-size: 22rpx;
+
+  font-family: ArialMT;
+
+  color: rgba(230, 67, 64, 1);
+
+  margin-top: 38rpx;
+
+}
+
+.price {
+
+  color: red;
+
+  position: relative;
+
+}
+
+.title {
+
+  font-size: 26rpx;
+
+  font-family: PingFangSC-Regular;
+
+  font-weight: 400;
+
+  color: rgba(74, 74, 74, 1);
+
+  margin-top: 20rpx;
+
+}
+
+.desc {
+
+  height: 22rpx;
+
+  font-size: 22rpx;
+
+  font-family: PingFangSC-Regular;
+
+  font-weight: 400;
+
+  color: rgba(102, 102, 102, 1);
+
+}
+
+.small_text {
+
+  font-size: 28rpx;
+
+  margin-right: 40rpx;
+
+  margin-left: 10rpx;
+
+}
+
+.item-select-no {
+
+  position: relative;
+
+  width: 40rpx;
+
+  height: 40rpx;
+
+  border: 1px solid #ccc;
+
+  border-radius: 50%;
+
+  margin-top: 58rpx;
+
+  margin-left: 20rpx;
+
+}
+
+.item-select-yes {
+
+  position: relative;
+
+  width: 40rpx;
+
+  height: 40rpx;
+
+  border: 1px solid #1296db;
+
+  border-radius: 50%;
+
+  margin-top: 58rpx;
+
+  margin-left: 20rpx;
+
+}
+
+.item-select-yes text {
+
+  position: absolute;
+
+  left: 6rpx;
+
+  top: 6rpx;
+
+  height: 29rpx;
+
+  width: 29rpx;
+
+  border-radius: 50%;
+
+  background-color: #1296db;
+
+}
+
+.item-allselect-no {
+
+  position: relative;
+
+  width: 40rpx;
+
+  height: 40rpx;
+
+  margin-left: 20rpx;
+
+  border: 1px solid #ccc;
+
+  border-radius: 50%;
+
+}
+
+.item-allselect-yes {
+
+  position: relative;
+
+  width: 40rpx;
+
+  height: 40rpx;
+
+  margin-left: 20rpx;
+
+  border: 1px solid #1296db;
+
+  color: #fff;
+
+  border-radius: 50%;
+
+}
+
+.item-allselect-yes text {
+
+  position: absolute;
+
+  left: 6rpx;
+
+  top: 6rpx;
+
+  height: 29rpx;
+
+  width: 29rpx;
+
+  border-radius: 50%;
+
+  background-color: #1296db;
+
+}
+
+.item-image {
+
+  width: 128rpx;
+
+  height: 128rpx;
+
+  margin: 20rpx;
+
+}
+
+.bottom_line {
+
+  width: 100%;
+
+  height: 2rpx;
+
+  background: lightgray;
+
+}
+
+.bottom_total {
+
+  position: fixed;
+
+  display: flex;
+
+  flex-direction: column;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height:80rpx;
+
+  line-height:80rpx;
+
+  background: white;
+
+}
+
+.deleteimage{
+
+  width:40rpx;
+
+  height:40rpx;
+
+  position: absolute;
+
+  left: 450rpx;
+
+}
+
+.button-red {
+
+  background-color: #000;
+
+}
+
+button {
+
+  position: fixed;
+
+  right: 0;
+
+  color: white;
+
+  text-align: center;
+
+  display: inline-block;
+
+  font-size: 30rpx;
+
+  border-radius: 0rpx;
+
+  width: 30%;
+
+  height:80rpx;
+
+  line-height:80rpx;
+
+}
+
+
+
+.kongtitle{
+
+  color:  rgb(190, 186, 186);
+
+  margin-left: 170rpx;
+
+}
+
+.kongimage{
+
+  height: 150rpx;
+
+  width: 150rpx;
+
+  margin-left: 300rpx;
+
+  margin-top: 400rpx;
+
+}
+
+.kong{
+
+  height:100%;
+
+  width: 100%;
+  
+}

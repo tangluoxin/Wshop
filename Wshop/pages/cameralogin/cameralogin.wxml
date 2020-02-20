@@ -1,0 +1,29 @@
+<!--pages/cameralogin/cameralogin.wxml-->
+
+<!-- 界面：账号绑定人脸 -->
+<!-- 作者：吴彤 -->
+<!-- 最后更新时间：2019.9.9 -->
+
+<!-- 相机模块 -->
+<view class="camera" hidden="{{cameraFlag}}">
+  <camera mode="normal" device-position="front" flash="auto" binderror="error" style="width: 100%; height: 850rpx;"  hidden="{{cameraFlag}}"></camera>
+</view>
+
+<!-- 拍照按钮弹起样式 -->
+<view class="login" hidden="{{cameraFlag}}" bindtouchstart="start" bindtouchend="end">
+  <image class="inlogin" src="/images/takephoto2.png" mode="aspectFill" bindtap="takePhoto"></image>
+</view>
+
+<!-- 拍照按钮按下样式 -->
+<view class="login" hidden="{{!touchFlag}}">
+  <image class="inlogin" src="/images/takephoto.png" mode="aspectFill"></image>
+</view>
+
+<!-- 选择需要登录的账号的选择框 -->
+<view class="modalDlg" hidden="{{!chooseFlag}}">
+  <view class='choose'><text>请选择需要登录的账号</text></view>
+  <view class="id" wx:for="{{validID}}" wx:for-index="idx">
+    <button class="userID" bindtap="confirm" data-idx="{{idx}}">{{item}}</button>
+  </view>
+</view>
+<view class="mask" catchtouchmove="preventTouchMove" hidden="{{!chooseFlag}}"></view>

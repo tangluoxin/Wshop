@@ -1,0 +1,45 @@
+<!--pages/overlist/overlist.wxml-->
+
+<!-- 界面：全部订单界面 -->
+<!-- 作者：唐珞鑫 -->
+
+<!-- 可横向拖动的订单模块 -->
+<view wx:if="{{haslist}}">
+<view  wx:for="{{overlist}}" wx:key="{{index}}" data-time="{{item.time}}" data-totalprice="{{item.totalprice}}" catchtap="inList" >
+  
+  <view  class="over" >
+   <view  class="list-time">{{item.time}}</view>
+   <scroll-view scroll-x>
+   <view class="list-img">
+     <view wx:for='{{item.orders}}'wx:key="{{index}}">
+       <image class="list-img" src="{{item.image}}"></image>
+     </view>
+   </view>
+   </scroll-view>
+
+    <view class="line">
+     <view class="content">
+       <view class="contentin1">共{{item.orders.length}}种</view><view class="contentin2">实付款：<text class="money">¥{{item.totalprice}}</text></view>
+       
+     </view>
+   
+     <view class="content1">
+       
+       <button class="bnt"data-time="{{item.time}}" catchtap="deleteList">删除订单</button>
+     </view>
+    </view>
+
+  
+  </view>
+</view> 
+</view>
+
+<!-- 订单记录为空时界面显示 -->
+<block wx:else>
+  <view  class="kong" catchtap="goshop">
+    <image class='kongimage' src='../../images/购物车为空.png'></image>
+    <view class="kongtitle">空空如也，赶快行动吧</view>
+  </view>
+
+</block>
+

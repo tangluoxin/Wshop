@@ -1,0 +1,73 @@
+<!--pages/login/login.wxml-->
+
+<!-- 界面：手机号密码登录-->
+<!-- 作者：唐珞鑫 -->
+
+<view class='container '>
+ <view bindtap="bindViewTap" class="userinfo">
+ 
+ <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"
+ 
+ background-size="cover"/>
+</view>
+
+<view class="login-from">
+
+<!--图片-->
+<view class='imagesize'>
+  <image src="/images/logo.png" class='in-image'   >
+  </image>
+</view>
+
+ 
+<!--账号-->
+ 
+<view class="inputView">
+ 
+<label class="loginLab"></label>
+ 
+<input class="inputText" placeholder="请输入手机号" bindinput="idInput" />
+ 
+</view>
+ 
+<!--密码-->
+ 
+<view class="inputView">
+ 
+<label class="loginLab"></label>
+ 
+<input class="inputText" password="true" placeholder="请输入密码"
+ 
+bindinput="passwordInput"/>
+ 
+</view>
+
+
+<!--按钮-->
+ 
+<view class="loginBtnView">
+ 
+<button class="loginBtn" size="{{primarySize}}" loading="{{loading}}"
+ 
+plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
+ 
+</view>
+
+<view class="content">
+<navigator url="../login_y/login_y">
+<label class=".login_yLab "> 短信登录</label>
+</navigator>
+
+<navigator url="../cameralogin/cameralogin">
+<label class=".login_sLab">人脸登录</label>
+</navigator>
+
+<navigator url="../register/register">
+<label class=".register "> 新用户注册</label>
+</navigator>
+</view>
+
+</view>
+ 
+</view>
+

@@ -1,0 +1,87 @@
+<!--pages/shoppingcar/shoppingcar.wxml-->
+
+
+<!-- 界面：购物车 -->
+<!-- 作者：唐珞鑫 -->
+
+
+<!-- 购物车商品模块 -->
+<view class="backback">
+
+<block wx:if="{{hascart}}">
+ <view class='drug-order'>
+ 
+  <scroll-view class='scroll' scroll-y="true">
+   
+    <view class='separate'></view>
+    
+
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index=" {{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{carts}}" wx:key=""data-gid="{{item.gid}}" catchtap="goDet">
+     <view class="content">
+      <view class='cart_container'>
+        <view 
+          class='{{item.isSelect?"item-select-yes":"item-select-no"}}'
+          catchtap="switchSelect" 
+          data-index="{{index}}" 
+          data-id="{{index}}"
+        >
+          <text></text>
+        </view>
+        <image class='item-image' src='{{item.imgSrc}}'></image>
+        <view class='column'>
+          <text class='title'>{{item.title}}</text>
+          <text class='desc'></text>
+          <view class='row'>
+            <text class='sku-price'>￥</text>
+            <text class='sku-price'>{{item.price}}</text>
+            <view class="loca">
+              <view class='sku'>
+                <text class='sub' catchtap='quantityChange' id='sub' data-gid="{{item.gid}}" data-index="{{index}}" >-</text>
+                <text class='number'>{{item.quantity}}</text>
+                <text class='add' catchtap='quantityChange' id='add' data-gid="{{item.gid}}" data-index="{{index}}" >+</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+      <view class='separate'></view>
+
+
+    </view>
+
+    <!-- 左滑删除按钮 -->
+    <view class="del" catchtap="del" data-index="{{index}}" data-gid="{{item.gid}}">删除</view>
+
+    </view>
+  </scroll-view>
+
+
+  <!-- 下方结算控件 -->
+  <view class='bottom_total'>
+    <view class='bottom_line'></view>
+    <view class='row'>
+      <view catchtap='selectAll' class='{{isAllSelect?"item-allselect-yes":"item-allselect-no"}}'>
+        <text></text>
+      </view>
+      <text class='small_text'>全选</text>
+      <text>合计：￥</text>
+      <text class='price'>{{totalMoney}}</text>
+      <image class='deleteimage' src='../../images/删除.png' catchtap="deletegood"></image>
+      <button class='button-red' catchtap='settle' form-type='submit'>结算</button>
+    </view>
+  </view>
+ </view>
+</block>
+
+<!-- 购物车为空界面显示 -->
+<block wx:else>
+  <view  class="kong" catchtap="goshop">
+    <image class='kongimage' src='../../images/购物车为空.png'></image>
+    <view class="kongtitle">购物车空空如也，赶快行动吧</view>
+  </view>
+
+</block>
+
+</view>

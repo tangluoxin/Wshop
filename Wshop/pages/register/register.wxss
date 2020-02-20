@@ -1,0 +1,355 @@
+/* pages/register/register.wxss */
+
+/* 界面：注册 */
+/* 作者：唐珞鑫 */
+
+ radio-group .radio{
+
+  margin-left: 10rpx;
+
+ margin-top: 100rpx;
+
+ flex-direction: row;
+
+}
+
+ radio-group radio{
+
+  margin-left: 197rpx;
+
+  flex-direction: row;
+ 
+}
+/* 单选框未选中 */
+radio .wx-radio-input {
+
+    width: 24rpx;
+
+    height: 24rpx;
+
+    border-radius: 50%;
+   
+}
+
+
+/* 单选框选中后对勾样式 */
+radio .wx-radio-input.wx-radio-input-checked::before{
+
+    border-radius: 50%;
+
+    width: 44rpx;
+
+    height: 44rpx;
+
+    line-height: 44rpx;
+
+    text-align: center;
+
+    font-size: 26rpx;   
+
+    color:#fff;
+
+    background-color: #1296db;
+
+    border-color: #1296db;
+
+    margin-top:0rpx;
+
+}
+ 
+radio-group{
+
+align-items: center;
+
+}
+.inputText_1{
+
+height: 60rpx;
+
+width: 370rpx;
+
+flex: block;
+ 
+float: right;
+ 
+text-align: center;
+ 
+margin-right: 178rpx;
+ 
+margin-top: 0rpx;
+
+margin-bottom: 20rpx;
+ 
+color: #a7abaf;
+ 
+font-size: 28rpx;
+
+border: 2rpx solid #cccccc; 
+
+border-radius: 30rpx;
+
+background-color: white;
+ 
+}
+
+.inputText_2{
+
+height: 60rpx;
+
+width: 370rpx;
+
+flex: block;
+ 
+float: right;
+ 
+text-align: center;
+ 
+margin-right: 178rpx;
+ 
+margin-top: 22rpx;
+ 
+color: #a7abaf;
+ 
+font-size: 28rpx;
+
+border: 2rpx solid #cccccc; 
+
+border-radius: 30rpx;
+
+background-color: white;
+ 
+}
+
+.inputText_3{
+
+height: 60rpx;
+
+width: 370rpx;
+
+flex: block;
+ 
+float: right;
+ 
+text-align: center;
+ 
+margin-right: 178rpx;
+ 
+margin-top: 22rpx;
+ 
+color: #a7abaf;
+ 
+font-size: 28rpx;
+
+border: 2rpx solid #cccccc; 
+
+border-radius: 30rpx;
+
+background-color: white;
+ 
+}
+
+.content {
+
+  display: flex;
+
+  flex-direction: row;
+
+  margin-top: 15rpx;
+
+  margin-left: 175rpx;
+
+}
+
+.content_a {
+
+  display: flex;
+
+  flex-direction: row;
+
+  margin-top: 20rpx;
+
+  margin-left: 175rpx;
+
+}
+
+.login_yLab {
+ 
+margin: 0rpx 20rpx 0rpx 20rpx;
+ 
+color: #1296db;
+ 
+font-size: 20rpx;
+
+}
+
+.login_sLab {
+ 
+margin: 0rpx 20rpx 0rpx 20rpx;
+ 
+color: #1296db;
+ 
+font-size: 20rpx;
+ 
+}
+
+.register{
+ 
+margin: 0rpx 20rpx 0rpx 20rpx;
+ 
+color: #1296db;
+ 
+font-size: 20rpx;
+
+}
+
+.imagesize{
+
+ display:flex;    
+
+ justify-content: center;   
+
+ margin-bottom: 100rpx;      
+
+}
+
+.imagesize image { 
+
+  width:150rpx;
+
+  height:150rpx;
+
+}
+
+.row{
+
+  height: 60rpx;
+
+ width: 370rpx;
+
+ flex: block;
+ 
+ float: right;
+ 
+ text-align: center;
+ 
+ margin-right: 185rpx;
+ 
+ margin-top: 22rpx;
+
+ margin-bottom: 50rpx;
+ 
+ color: #a7abaf;
+ 
+ font-size: 28rpx;
+
+ border: 2rpx solid #cccccc; 
+
+ border-radius: 30rpx;
+
+ background-color: white;
+
+  box-sizing: border-box;
+
+}
+
+.row_a{
+
+  height: 60rpx;
+
+ width: 200rpx;
+
+ flex: block;
+ 
+ float: right;
+ 
+ text-align: center;
+ 
+ margin-left: 18rpx;
+ 
+ margin-top: 255rpx;
+ 
+ color: #a7abaf;
+ 
+ font-size: 28rpx;
+
+ border: 2rpx solid #cccccE; 
+
+ border-radius: 30rpx;
+
+ background-color: white;
+
+  box-sizing: border-box;
+
+}
+
+.row input{
+
+  width: 100%;
+
+  height:100%;
+
+}
+.rowcontent {
+
+  display: flex;
+
+  flex-direction: row;
+  
+}
+.codeBtn{
+  
+ margin-top: 255rpx;
+
+  color: #bbb;
+
+  width: 170rpx;
+
+  font-size: 22rpx;
+
+  height: 58rpx;
+  
+}
+
+.subBtn{
+
+  width: 200rpx;
+
+  height: 80rpx;
+
+  background: #fff;
+
+  color: #000;
+
+  border-radius: 50rpx;
+
+  line-height: 80rpx;
+
+}
+
+.loginBtn {
+
+width: 50%;
+ 
+margin-top: 30rpx;
+
+color: #fff;
+
+background-color: #000;
+ 
+}
+
+.imagesize{
+   
+ margin-top: 20rpx; 
+
+ margin-bottom: 50rpx;   
+
+}
+
+.imagesize image { 
+
+  width:80rpx;
+
+  height:80rpx;
+
+}

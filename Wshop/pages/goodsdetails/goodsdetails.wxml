@@ -1,0 +1,41 @@
+<!--pages/goodsdetails/goodsdetails.wxml-->
+
+<!-- 界面：商品详情 -->
+<!-- 作者：吴彤 -->
+<!-- 最后更新时间：2019.9.9 -->
+
+<!-- 商品图片 -->
+<image class="picture" wx:for="{{goodsDetails}}" src="{{item.imgSrc}}" mode="widthFix"></image>
+
+<!-- 商品详情（名称、单价、位置）及商品数量 -->
+<view class="goodsdetails" wx:for="{{goodsDetails}}">
+  <view class="goodsdetails">
+    <view class="name">{{item.name}}</view>
+    <view class="pricestorage">
+      <view class="price">¥{{item.price}}</view>
+      <!-- 主容器 -->
+      <view class="stepper"> 
+        <!-- 减号 --> 
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text> 
+        <!-- 数值 --> 
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <!-- 加号 --> 
+        <text class="{{plusStatus}}" bindtap="bindPlus">+</text> 
+      </view>
+    </view>
+
+    <view class="location">货架：{{item.location}}</view>
+    <text>\n\n\n\n\n\n\n</text>
+  </view>
+</view>
+
+<!-- 跳转到购物车和加入购物车按钮 -->
+<view class="local">
+  <view class='GoToShoppingCart'>
+    <image class="ingoto" src="/images/shoppingcart.png" mode="aspectFill" bindtap="goToShoppingCart"></image>
+  </view>
+
+  <text class="goto" bindtap="goToShoppingCart">查看购物车</text>
+
+  <button class="addto" bindtap="addtoShoppingCart"><text class="add">加入购物车</text></button>
+</view>

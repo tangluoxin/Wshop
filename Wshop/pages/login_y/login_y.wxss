@@ -1,0 +1,248 @@
+/* pages/login_y/login_y.wxss */
+
+/* 界面：手机号验证码登录 */
+/* 作者：唐珞鑫 */
+
+page{
+
+  height: 100%; 
+  
+}
+
+.container{
+  
+  height: 100%;
+ 
+ display: flex;
+ 
+ flex-direction: column;
+ 
+ padding: 0;
+ 
+ box-sizing: border-box;
+ 
+ background-color: #fff
+
+}
+ 
+.userinfo {
+ 
+padding: 0rpx 0;
+ 
+align-items: center;
+ 
+}
+ 
+.userinfo-avatar {
+ 
+width: 128rpx;
+ 
+height: 128rpx;
+ 
+margin: 20rpx;
+ 
+border-radius: 50%;
+ 
+}
+
+.login-from {
+ 
+margin-top: 0rpx;
+ 
+flex: auto;
+ 
+height:100%;
+ 
+}
+
+.content {
+
+  display: flex;
+
+  flex-direction: row;
+
+  margin-top: 15rpx;
+
+  margin-left: 175rpx;
+
+}
+
+.content_a {
+
+  display: flex;
+
+  flex-direction: row;
+
+  margin-top: 15rpx;
+
+  margin-left: 175rpx;
+
+}
+
+.login_yLab {
+ 
+margin: 0rpx 20rpx 0rpx 20rpx;
+ 
+color: #1296db;
+ 
+font-size: 20rpx;
+
+}
+
+.login_sLab {
+ 
+margin: 0rpx 20rpx 0rpx 20rpx;
+ 
+color: #1296db;
+ 
+font-size: 20rpx;
+ 
+}
+
+.register{
+ 
+margin: 0rpx 20rpx 0rpx 20rpx;
+ 
+color: #1296db;
+ 
+font-size: 20rpx;
+
+}
+
+.imagesize{
+
+ display:flex;   
+
+ justify-content: center;   
+
+ margin-bottom: 100rpx;    
+
+}
+
+.imagesize image { 
+
+  width:150rpx;
+
+  height:150rpx;
+
+}
+
+.row{
+
+ height: 60rpx;
+
+ width: 370rpx;
+
+ flex: block;
+ 
+ float: right;
+ 
+ text-align: center;
+ 
+ margin-right: 185rpx;
+ 
+ margin-top: 22rpx;
+
+ margin-bottom: 50rpx;
+ 
+ color: #a7abaf;
+ 
+ font-size: 28rpx;
+
+ border: 2rpx solid #cccccc; 
+
+ border-radius: 30rpx;
+
+ background-color: white;
+
+ box-sizing: border-box;
+
+}
+
+.row_a{
+
+ height: 60rpx;
+
+ width: 200rpx;
+
+ flex: block;
+ 
+ float: right;
+ 
+ text-align: center;
+ 
+ margin-left: 18rpx;
+ 
+ margin-top: 110rpx;
+ 
+ color: #a7abaf;
+ 
+ font-size: 28rpx;
+
+ border: 2rpx solid #cccccc; 
+
+ border-radius: 30rpx;
+
+ background-color: white;
+
+ box-sizing: border-box;
+
+}
+
+.row input{
+
+ width: 100%;
+
+ height:100%;
+
+}
+
+.rowcontent {
+
+ display: flex;
+
+ flex-direction: row;
+  
+}
+
+.codeBtn{
+  
+ margin-top: 110rpx;
+
+ color: #bbb;
+
+ width: 170rpx;
+
+ font-size: 22rpx;
+
+ height: 58rpx;
+  
+}
+
+.subBtn{
+
+ width: 200rpx;
+
+ height: 80rpx;
+
+ background: #fff;
+
+ color: #000;
+
+ border-radius: 50rpx;
+
+ line-height: 80rpx;
+
+}
+
+.loginBtn {
+
+width: 50%;
+ 
+margin-top: 30rpx;
+
+color: #fff;
+
+background-color: #2c2c2c;
+ 
+}

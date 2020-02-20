@@ -1,0 +1,100 @@
+<!--pages/shop/shop.wxml-->
+
+<!-- 界面：商城界面 -->
+<!-- 作者：唐珞鑫 -->
+
+<!-- 搜索栏 -->
+  <view class='page_row' bindtap="suo">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="shuru" disabled placeholder="请输入关键字" value="{{searchValue}}"/>
+      </view>
+    </view>
+   <image class='ScanCode' catchtap="getScanCode" src='../../images/扫一扫.png'></image>
+  </view>
+
+
+
+ <!-- 一键回到顶部 -->
+ <image class='top' catchtap='goTop' src='{{ icoSrc }}'></image>
+
+
+<!-- 顶部滚动推荐栏 -->
+ <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+  <block wx:for="{{bnrUrl}}" wx:for-index="index">
+    <swiper-item>
+      <image src='{{item.url}}' class='u-img-slide' mode='aspectFill'></image>
+    </swiper-item>
+  </block>
+ </swiper>
+
+
+<!-- 当季热销推荐位 -->
+<view class="roll">
+    <view class="rolltitle">当季热销</view>
+
+    <view class="rollbox">
+    <scroll-view scroll-x >
+     <view class="list-img">
+      <view wx:for='{{hot}}'wx:key="{{index}}">
+        <view class="boxa" catchtap="goDet" data-gid="{{item.gid}}">
+        <image class='pic' src='{{item.image}}'></image>
+        <view class="goodname">{{item.name}}</view>
+        <view class="goodprice">¥{{item.uprice}}</view>
+        <view class="goodsale">月销{{item.sales}}</view>
+        <image class='go' catchtap="addcart" data-gid="{{item.gid}}" src='../../images/加入购物车.png'></image>
+        </view>
+      </view>
+     </view>
+   </scroll-view>
+   </view>
+</view>
+
+
+
+<!-- 用户推荐商品双瀑布流 -->
+<view wx:if="{{hasnoramalData}}">
+<view class="title">猜你喜欢</view>
+
+  <view class='content'>
+
+   <view class='left'>
+    <view class='leftview' wx:for="{{leftList}}" wx:key="index" catchtap="goDet" data-gid="{{item.gid}}">
+     <view class="box">
+       <image class='pic' src='{{item.image}}'></image>
+       <view class="goodname">{{item.name}}</view>
+       <view class="goodprice">¥{{item.uprice}}</view>
+  
+       <image class='go' catchtap="addcart" data-gid="{{item.gid}}" src='../../images/加入购物车.png'></image>
+     </view>
+    </view>
+   </view>
+
+   <view class='right'>
+     <view class='rightview' wx:for="{{rightList}}" wx:key="index" catchtap="goDet" data-gid="{{item.gid}}">
+        <view class="box">
+         <image class='pic' src='{{item.image}}'></image>
+         <view class="goodname">{{item.name}}</view>
+         <view class="goodprice">¥{{item.uprice}}</view>
+      
+         <image class='go' catchtap="addcart" data-gid="{{item.gid}}" src='../../images/加入购物车.png'></image>
+        </view>
+      </view>
+    </view>
+ </view>
+</view>
+
+
+<view wx:else>
+<view class='placeholder-view'></view>
+</view>
+
+
+
+ <!-- 防挡透明控件放在最下面 -->
+<view class='placeholder-view'></view>
+
+
+
+

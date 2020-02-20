@@ -1,0 +1,51 @@
+<!-- pages/mine/mine.wxml -->
+
+<!-- 界面：我的界面-->
+<!-- 作者：唐珞鑫 -->
+
+<view class="backback">
+<image class='background-image' mode="widthFix" src='../../images/back.png' ></image>
+
+<view class="box">{{showname}}</view>
+
+<!-- 按钮板块 -->
+<view class="box">
+  <button class='btn1' bindtap="Modify"> 
+    <image class='btnImg' src='../../images/完善信息.png'></image>
+    <view>完善信息</view>
+  </button>
+
+  <button class='btn2' bindtap="golist">
+    <image class='btnImg' src='../../images/购买记录.png'></image>
+    <view>购物记录</view>
+  </button>
+
+  <button class='btn1' bindtap="face">
+    <image class='btnImg' src='../../images/绑定人脸.png'></image>
+    <view>绑定人脸</view>
+  </button>
+
+</view>
+
+<view class="box">
+  <button class='btn1' open-type='contact'>
+    <image class='btnImg' src='../../images/联系客服.png'></image>
+    <view>联系客服</view>
+  </button>
+
+  <button class='btn1' open-type='feedback'> 
+    <image class='btnImg' src='../../images/意见反馈.png'></image>
+    <view>意见反馈</view>
+  </button>
+
+  <button class='btn2' open-type='share'>
+    <image class='btnImg' src='../../images/分享应用.png'></image>
+    <view>分享应用</view>
+  </button>
+
+</view>
+
+<!-- 用户消费分析板块 -->
+<canvas canvas-id="ringCanvas" disable-scroll="true" class="canvas"></canvas>
+
+</view>

@@ -1,0 +1,184 @@
+/* pages/overlist/overlist.wxss */
+
+/* 界面：全部订单界面 */
+/* 作者：唐珞鑫 */
+
+.t{
+
+display:flex;
+
+flex-direction: row;
+
+}
+
+.list-time{
+
+  font-size: 25rpx;
+
+  height: 55rpx;
+
+  margin-top: 20rpx; 
+
+  border-bottom: 1rpx solid rgb(240, 237, 237);
+
+}
+
+.list-img{
+
+  width: 100rpx;
+
+  height: 100rpx;
+
+  margin-right: 10rpx;
+
+  display:flex;
+
+  flex-direction: row;
+   
+}
+
+.s{
+
+  width: 130rpx;
+
+  height: 130rpx;
+  
+}
+
+.over{
+
+  padding-left: 15rpx;
+
+  padding-right: 15rpx;
+ 
+  border-top: 7rpx solid rgb(240, 237, 237);
+  
+}
+
+.line{
+
+  border-top: 1rpx solid rgb(240, 237, 237); 
+
+}
+
+.content {
+
+  height: 30rpx;
+
+  display: flex;
+
+  flex-direction: row;
+
+  position: relative;
+ 
+}
+
+.contentin1{
+
+  font-size: 23rpx;
+  
+  position: absolute;
+
+  left: 10rpx;
+  
+  top:20rpx;
+  
+}
+
+.contentin2{
+
+  font-size: 23rpx;
+  
+  position: absolute;
+
+  right: 15rpx;
+ 
+  top:10rpx
+
+}
+
+
+.money{
+
+  color: rgb(218, 13, 13);
+
+  font-size: 33rpx;
+ 
+}
+
+
+.content1 {
+
+  display: flex;
+
+  margin-left: 570rpx;
+
+  flex-direction: row;
+
+  justify-content: flex-end; 
+
+  margin-top: 15rpx;
+
+  margin-bottom: 10rpx;
+  
+}
+
+.bnt{
+
+  height: 49rpx;
+
+  width: 144rpx;
+
+  font-size: 23rpx;
+
+  display: flex;
+
+  align-items: center;
+  
+  background-color: white;
+
+  margin-bottom: 10rpx;
+
+  margin-top: 20rpx;
+
+}
+
+ button{
+
+   border-radius:0;
+
+}
+ 
+button::after{
+
+  border-radius:0;
+
+}
+
+.kongtitle{
+
+  color:  rgb(190, 186, 186);
+
+  margin-left: 210rpx;
+
+}
+
+.kongimage{
+
+  height: 150rpx;
+
+  width: 150rpx;
+
+  margin-left: 300rpx;
+
+  margin-top: 400rpx;
+
+}
+
+.kong{
+
+  height: 1400rpx;
+
+  width: 1200rpx;
+  
+}

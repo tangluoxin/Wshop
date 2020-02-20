@@ -1,0 +1,54 @@
+<!--pages/modify/modify.wxml-->
+
+<!-- 界面：修改个人信息 -->
+<!-- 作者：唐珞鑫 -->
+
+<!--图片-->
+<view class='imagesize'>
+  <image src="/images/reg.png" class='in-image'   >
+  </image>
+</view>
+
+<input class="inputText_1" placeholder="{{showname}}" bindinput="idnameInput" />
+
+<!-- 单选框 -->
+
+<radio-group class="radio-group" bindchange="radioChange">
+    
+             <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+    
+</radio-group>
+
+
+
+<!-- 输入框 -->
+<input class="inputText_2" password="true" placeholder="请输入密码" bindinput="passwordInput"/>
+
+<input class="inputText_3" password="true" placeholder="请重复输入密码" bindinput="rpasswordInput"/>
+
+
+<view class='row'>
+  <input type="number" placeholder='{{id}}' bindinput='bindPhoneInput'/> 
+</view>
+ 
+
+<!-- 验证码获取部件 -->
+<view class="content_a">
+  <view>
+     <input class='row_a' type="number" placeholder='输入验证码'  maxlength='4 'bindinput='bindCodeInput' /> 
+  </view>
+  <view>
+  <button class='.codeBtn' bindtap='getCode' hidden='{{hidden}}' disabled='{{btnDisabled}}'>{{btnValue}}</button>
+ </view>
+
+</view>
+
+<!-- 按钮部件 -->
+  <view>
+     <button class='.loginBtn ' bindtap='save' >提交修改</button>
+  </view>
+  <view>
+     <button class='.loginBtn ' bindtap='goface' >绑定人脸</button>
+  </view>
